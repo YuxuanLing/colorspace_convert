@@ -22,7 +22,6 @@ int  main()
 
 	init_colorspaceconverter(&coreconverter, src_format, dst_format, height, width, do_adaptive_interpolator, do_demomode);
 
-
 	ret = colorspaceconvert(&coreconverter, (unsigned char *)in_data, (unsigned char *)out_data, in_size, out_size);
 
 

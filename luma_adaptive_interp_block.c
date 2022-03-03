@@ -29,7 +29,7 @@ luma_adaptive_interp_block(int line,//current line in full-resolution array
   //unsigned char *y_dec_in1, *y_dec_in2, *y_dec_in3, *u_dec_in1, *u_dec_in2, *u_dec_in3, *v_dec_in1, *v_dec_in2, *v_dec_in3;	
   unsigned char y_local[4], u_prototype[4], v_prototype[4], y_d_cen, u_d_cen, v_d_cen;
   //unsigned int dec_in_height, dec_in_stride, full_in_height, full_in_width, full_in_stride; 
-  unsigned int dec_in_width;
+  int dec_in_width;
   int y_d_local[8], u_d_local[8], v_d_local[8];
   float u_scaling[8], v_scaling[8], u_scaling_scalar, v_scaling_scalar, u_error, v_error, quality;
   //float mean_quality_u, mean_quality_v, percent_corrected_u, percent_corrected_v;

@@ -1,5 +1,4 @@
 #pragma warning (disable:177)
-#pragma warning (disable:1418)
 #pragma warning (disable:193)
 
 //MACROS FOR WRITING PACKED FORMATS
@@ -243,14 +242,16 @@ void FUNCTION_NAME
 #ifdef __INTEL_COMPILER
 		__assume_aligned(in_data,8);
 		__assume_aligned(out_data,64);
-#endif
 #pragma ivdep
 #pragma loop count (720)
 #pragma vector nontemporal
+#endif
 		for (line = 0; line < height; line+=2)
 		{
+#ifdef __INTEL_COMPILER
 #pragma ivdep
 #pragma loop count (1280)
+#endif
 //#pragma unroll(8)
 			for (pix = 0; pix < width; pix+=2)
 			{

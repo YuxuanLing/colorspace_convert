@@ -3,6 +3,7 @@
 #pragma warning (disable:177)
 #pragma warning (disable:981) //operands are evaluated in unspecified order
 #pragma warning (disable:869) //parameter * was never referenced
+#pragma warning (disable:4101)
 void FUNCTION_NAME
 (const ColorSpaceConverter *colorconverter, const unsigned char *in_data, unsigned char *out_data, const int in_size, const int out_size)
 {
