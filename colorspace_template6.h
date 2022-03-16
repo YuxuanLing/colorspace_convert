@@ -799,7 +799,7 @@ void FUNCTION_NAME
 					int line_0_1 = (line *dst_ch0_stride + pix);
 					int line_0_2 = ((line + 1) * dst_ch0_stride +pix);
 					*(out_data + dst_ch0_offset + line_0_1)		=	ch0_1[0];
-					*(out_data + dst_ch0_offset + line_0_1 + 1)	=	ch0_1[1];
+ 					*(out_data + dst_ch0_offset + line_0_1 + 1)	=	ch0_1[1];
 					*(out_data + dst_ch0_offset + line_0_2)		=	ch0_1[2];
 					*(out_data + dst_ch0_offset + line_0_2 + 1)	=	ch0_1[3];
 #if (defined DST_4CHANNELS)

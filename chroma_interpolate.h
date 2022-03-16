@@ -65,10 +65,10 @@ extern "C" {
         int active_bpp; //24 or 32 bits per pixel
         int total_bpp; //24 or 32 "pixelstride" (bits per pixel including "dead space")
         int endianness;
-        Channel ch0;//Red or Y
-        Channel ch1;//Green or U
-        Channel ch2;//Blue or V
-        Channel ch3;//Alpha (if applicable)
+        Channel ch0;//Red or Y    : use 0 to signify
+        Channel ch1;//Green or U  : use 1 to signify
+        Channel ch2;//Blue or V   : use 2 to signify
+        Channel ch3;//Alpha (if applicable) : use 3 to signify
         ChromaLayout chromalayout;//info about any chroma subsampling (if YUV)
     };
 

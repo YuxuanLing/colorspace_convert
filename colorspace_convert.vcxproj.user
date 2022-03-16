@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 1 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted.yuv </LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 1 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted.yuv </LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

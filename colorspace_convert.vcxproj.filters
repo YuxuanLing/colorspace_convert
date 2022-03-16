@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="chroma_interpolate.c" />
+    <ClCompile Include="luma_adaptive_interp_block.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="util\getopt.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\log.c">
+      <Filter>util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chroma_interpolate.h" />
+    <ClInclude Include="colorspace_definitions.h" />
+    <ClInclude Include="colorspace_template.h" />
+    <ClInclude Include="colorspace_template1.h" />
+    <ClInclude Include="colorspace_template2.h" />
+    <ClInclude Include="colorspace_template3.h" />
+    <ClInclude Include="colorspace_template4.h" />
+    <ClInclude Include="colorspace_template5.h" />
+    <ClInclude Include="colorspace_template6.h" />
+    <ClInclude Include="regular_function.h" />
+    <ClInclude Include="SSEx_functions.h" />
+    <ClInclude Include="util\cutil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\getopt.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\log.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\timer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{20ad6e9f-9fbc-46e2-8d03-067e79eff176}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
