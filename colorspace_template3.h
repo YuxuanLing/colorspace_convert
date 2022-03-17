@@ -484,6 +484,15 @@
 				#undef DST_NAME
 				#undef DST_FUNCTION_INDEX
 			#undef DST_YUV709
+            #define DST_YUV709
+                #define DST_FUNCTION_INDEX 31
+                #define DST_NAME  planar_420_yuv709_interleaved
+                #define DST_INTERLEAVED
+                #include NEXT_HEADERFILE2
+                #undef  DST_INTERLEAVED
+                #undef  DST_NAME
+                #undef  DST_FUNCTION_INDEX
+            #undef DST_YUV709
 		#undef DST_420
 	#undef DST_3CHANNELS
 

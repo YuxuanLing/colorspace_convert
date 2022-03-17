@@ -842,11 +842,20 @@ void FUNCTION_NAME
 #elif (defined DST_420)
 					//else if (colorconverter->dst_format.chromalayout.horz_subs_factor == 2 
 					//	&& colorconverter->dst_format.chromalayout.vert_subs_factor == 2)//4:2:0
+#if (defined DST_INTERLEAVED)
+					{
+						int line_1 = ((line >> 1) * dst_ch1_stride) + pix;
+						*(out_data + dst_ch1_offset + line_1) = ch1_1[0];//(ch1_1[0] + ch1_1[1] + ch1_1[2] + ch1_1[3]) >> 2;
+						*(out_data + dst_ch2_offset + line_1) = ch2_1[0];//(ch2_1[0] + ch2_1[1] + ch2_1[2] + ch2_1[3]) >> 2;
+					}
+#else 
 					{
 						int line_1 = ((line >> 1) * dst_ch1_stride) + (pix >> 1);
 						*(out_data + dst_ch1_offset + line_1) = ch1_1[0];//(ch1_1[0] + ch1_1[1] + ch1_1[2] + ch1_1[3]) >> 2;
 						*(out_data + dst_ch2_offset + line_1) = ch2_1[0];//(ch2_1[0] + ch2_1[1] + ch2_1[2] + ch2_1[3]) >> 2;
 					}
+#endif //#if (defined DST_INTERLEAVED)
+
 #endif//#elif (defined DST_422)
 				}
 #endif//#if (defined DST_PLANAR)

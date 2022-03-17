@@ -131,7 +131,14 @@ int decode_format(FormatDescriptor format)
 						index = 23;
 					}
 					else if (format.colorspace == BT709) {
-						index = 24;
+						if (format.chromalayout.interleaved)
+						{
+							index = 31;
+						}
+						else
+						{
+							index = 24;
+						}
 					}
 			}
 		}

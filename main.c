@@ -91,14 +91,15 @@ int main(int argc, char* argv[])
 	switch (converType)
 	{
 	case 0:
-		//BGRA8888To420P
+	case 1:
+		//BGRA8888To420P BGRA8888ToNV12
 		srcChannel = 4;
 		dstChannel = 3;
 		srcFrmBytes = srcStride * srcHeight;
 		dstFrmBytes = dstStride * dstHeight * dstChannel / 2;
 		break;
-	case 1:
-		//NV12ToXRGB8888
+	case 2:
+		//NV12ToXRGB8888, not support yet
 		srcChannel = 3;
 		dstChannel = 4;
 		srcFrmBytes = srcStride * srcHeight * srcChannel / 2;
@@ -179,29 +180,38 @@ int main(int argc, char* argv[])
 	dst_format.ch0.offset = 0;
 	dst_format.ch0.stride = dstStride;
 
-	//for 420P
-	dst_format.ch1.byte_offset1 = 1;    //U
-	dst_format.ch1.mask1 = 0x00ff0000;
-	dst_format.ch1.offset = dstStride*dstHeight;
-	dst_format.ch1.stride = dstStride/2;
-
-	dst_format.ch2.byte_offset1 = 2;    //V
-	dst_format.ch2.mask1 = 0x0000ff00;
-	dst_format.ch2.offset = dstStride * dstHeight + (dstStride /2)*(dstHeight/2);
-	dst_format.ch2.stride = dstStride/2;
-
-	dst_format.ch1.byte_offset1 = 1;    //U
-	dst_format.ch1.mask1 = 0x00ff0000;
-	dst_format.ch1.offset = dstStride * dstHeight;
-	dst_format.ch1.stride = dstStride;
-
-	dst_format.ch2.byte_offset1 = 2;    //V
-	dst_format.ch2.mask1 = 0x0000ff00;
-	dst_format.ch2.offset = dstStride * dstHeight + 1;
-	dst_format.ch2.stride = dstStride;
-
 	dst_format.active_bpp = 24;
 	dst_format.total_bpp = 24;
+	
+
+	switch (converType)
+	{
+	case 0:
+		//for DST 420P
+		dst_format.ch1.byte_offset1 = 1;    //U
+		dst_format.ch1.mask1 = 0x00ff0000;
+		dst_format.ch1.offset = dstStride * dstHeight;
+		dst_format.ch1.stride = dstStride / 2;
+
+		dst_format.ch2.byte_offset1 = 2;    //V
+		dst_format.ch2.mask1 = 0x0000ff00;
+		dst_format.ch2.offset = dstStride * dstHeight + (dstStride / 2) * (dstHeight / 2);
+		dst_format.ch2.stride = dstStride / 2;
+		break;
+	case 1:
+		//for DST NV12
+		dst_format.ch1.byte_offset1 = 1;    //U
+		dst_format.ch1.mask1 = 0x00ff0000;
+		dst_format.ch1.offset = dstStride * dstHeight;
+		dst_format.ch1.stride = dstStride;
+
+		dst_format.ch2.byte_offset1 = 2;    //V
+		dst_format.ch2.mask1 = 0x0000ff00;
+		dst_format.ch2.offset = dstStride * dstHeight + 1;
+		dst_format.ch2.stride = dstStride;
+		dst_format.chromalayout.interleaved = 1;
+		break;
+	}
 
 
 	init_colorspaceconverter(&coreconverter, src_format, dst_format, dstHeight, dstWidth, do_adaptive_interpolator, do_demomode);

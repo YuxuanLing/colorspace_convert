@@ -9,11 +9,11 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>--type 1 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>--type 0 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>--type 1 --sW 1920 --sH 1080 --sS 7680 --dW 1920 --dH 1080 --dS 1920 --frms 10 -i D:\work\yuv\ParkScene_1920x1080_24_bgra8888.yuv  -o D:\work\yuv\ParkScene_1920x1080_24_nv12_converted_new.yuv </LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

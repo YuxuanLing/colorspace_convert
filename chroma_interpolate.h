@@ -49,6 +49,7 @@ extern "C" {
         int horz_support_end;
         int vert_support_start;
         int vert_support_end;
+        int interleaved;              //for nv12 ,nv21 related
     };
 
     struct _FormatDescriptor
