@@ -6,8 +6,8 @@
 #include <assert.h>
 #include <stdlib.h>
 
-#define INTEGER_TRANSFORM//undef falls back to text-book floating point operations (for debugging)
-#define USE_MACRO_TEMPLATES//undef falls back to straight function-oriented pipeline (for debugging)
+#define INTEGER_TRANSFORM    //undef falls back to text-book floating point operations (for debugging)
+#define USE_MACRO_TEMPLATES  //undef falls back to straight function-oriented pipeline (for debugging)
 #include "colorspace_template1.h"
 
 void select_converter(ColorSpaceConverter *colorconverter, int * srcIdx, int * dstIdx)

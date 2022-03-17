@@ -1,6 +1,5 @@
 #define NEXT_HEADERFILE2 "colorspace_template4.h"
-//stuff for templated pipeline
-//Traversing every legal output format
+
 #define DST_PACKED
 	#define DST_3CHANNELS
 		#define DST_PIXELPERIOD1

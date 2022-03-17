@@ -1,130 +1,36 @@
-/*Constants necessary for the colorspace conversion. First MATLAB script for generating values,
-then printout from MATLAB*/
+/*Constants necessary for the colorspace conversion. First MATLAB script for generating values, then printout from MATLAB*/
 
 #pragma warning( disable : 4305 )
 
 
-const unsigned char BT601_lo[3]			=	{16,	16,		16};
-const unsigned char BT601_hi[3]			=	{235,	240,	240};
+const unsigned char BT601_lo[3] = { 16,	16,		16 };
+const unsigned char BT601_hi[3] = { 235,	240,	240 };
 
-const unsigned char BT709_lo[3]			=	{16,	16,		16};
-const unsigned char BT709_hi[3]			=	{235,	240,	240};
+const unsigned char BT709_lo[3] = { 16,	16,		16 };
+const unsigned char BT709_hi[3] = { 235,	240,	240 };
 
-const unsigned char sRGB_PC_lo[3]		=	{0,		0,	0};
-const unsigned char sRGB_PC_hi[3]		=	{255,	255,	255};
+const unsigned char sRGB_PC_lo[3] = { 0,		0,	0 };
+const unsigned char sRGB_PC_hi[3] = { 255,	255,	255 };
 
-const unsigned char sRGB_Studio_lo[3]	=	{16,	16,		16};
-const unsigned char sRGB_Studio_hi[3]	=	{235,	235,	235};
+const unsigned char sRGB_Studio_lo[3] = { 16,	16,		16 };
+const unsigned char sRGB_Studio_hi[3] = { 235,	235,	235 };
 
 /* -= Constants copied from script above: =- */
 
-const float float_in_offset[3][3][3]= {
+const float float_in_offset[3][3][3] = 
 {
-{
-0,
-0,
-0,
-},
-{
-16,
-16,
-16,
-},
-{
-16,
-16,
-16,
-},
-},
-{
-{
-0,
-0,
-0,
-},
-{
-128,
-128,
-128,
-},
-{
-128,
-128,
-128,
-},
-},
-{
-{
-0,
-0,
-0,
-},
-{
-128,
-128,
-128,
-},
-{
-128,
-128,
-128,
-},
-},
+{{0,0,0,},{16,16,16,},{16,16,16,},},
+{{0,0,0,},{128,128,128,},{128,128,128,},},
+{{0,0,0,},{128,128,128,},{128,128,128,},},
 };
-const float float_out_offset[3][3][3]= {
-{
-{
-0,
-16,
-16,
-},
-{
-0,
-16,
-16,
-},
-{
-0,
-16,
-16,
-},
-},
-{
-{
-0,
-128,
-128,
-},
-{
-0,
-128,
-128,
-},
-{
-0,
-128,
-128,
-},
-},
-{
-{
-0,
-128,
-128,
-},
-{
-0,
-128,
-128,
-},
-{
-0,
-128,
-128,
-},
-},
+
+
+const float float_out_offset[3][3][3] = {
+{{0,16,16,},{0,16,16,},{0,16,16,},},
+{{0,128,128,},{0,128,128,},{0,128,128,},},
+{{0,128,128,},{0,128,128,},{0,128,128,},},
 };
-const float float_conv_matrix[3][3][3][3]= 
+const float float_conv_matrix[3][3][3][3] =
 {
 {
 
@@ -275,7 +181,7 @@ const float float_conv_matrix[3][3][3][3]=
 },
 },
 };
-const signed short int16_in_offset[3][3][3]= {
+const signed short int16_in_offset[3][3][3] = {
 {
 {
 0,
@@ -328,7 +234,7 @@ const signed short int16_in_offset[3][3][3]= {
 },
 },
 };
-const signed short int16_out_offset[3][3][3]= {
+const signed short int16_out_offset[3][3][3] = {
 {
 {
 64,
@@ -381,7 +287,7 @@ const signed short int16_out_offset[3][3][3]= {
 },
 },
 };
-const signed short int16_conv_matrix[3][3][3][3]= {
+const signed short int16_conv_matrix[3][3][3][3] = {
 {
 {
 {
@@ -542,7 +448,7 @@ const signed short int16_conv_matrix[3][3][3][3]= {
 },
 },
 };
-const signed short int16_clip[3][2][3][3]= {
+const signed short int16_clip[3][2][3][3] = {
 {
 {
 {
@@ -652,20 +558,7 @@ const signed short int16_clip[3][2][3][3]= {
 },
 },
 };
-const signed short int16_exponent[3][3]= {
+const signed short int16_exponent[3][3] = 
 {
-7,
-7,
-7,
-},
-{
-5,
-7,
-7,
-},
-{
-5,
-6,
-7,
-},
+{7,7,7,},{5,7,7,},{5,6,7,},
 };

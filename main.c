@@ -128,16 +128,16 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	int ret = 0, do_adaptive_interpolator = 0, do_demomode = 0;	
+	int ret = 0, do_adaptive_interpolator = 0, do_demomode = 0;
 	ColorSpaceConverter  coreconverter;
 	FormatDescriptor src_format, dst_format;
 
 	memset(&src_format, 0, sizeof(FormatDescriptor));
-	memset(&dst_format, 0 ,sizeof(FormatDescriptor));
+	memset(&dst_format, 0, sizeof(FormatDescriptor));
 
 	src_format.colorspace = sRGB_PC;
 	src_format.organisation = PACKED;
-	src_format.width  = srcWidth;
+	src_format.width = srcWidth;
 	src_format.height = srcHeight;
 	src_format.stride = srcStride;
 	src_format.active_channels = 4;
@@ -182,7 +182,7 @@ int main(int argc, char* argv[])
 
 	dst_format.active_bpp = 24;
 	dst_format.total_bpp = 24;
-	
+
 
 	switch (converType)
 	{
@@ -224,11 +224,11 @@ int main(int argc, char* argv[])
 			break;
 		}
 		TRACE_QUERY_START
-	    ret = colorspaceconvert(&coreconverter, (unsigned char *)src, (unsigned char *)dst, srcFrmBytes, dstFrmBytes);
+			ret = colorspaceconvert(&coreconverter, (unsigned char*)src, (unsigned char*)dst, srcFrmBytes, dstFrmBytes);
 		TRACE_QUERY_FROM_LAST("WxH %d x %d Convert Time Elapsed In MS = %f idx=%d \n", srcWidth, srcHeight, elapsedTimeInMS, frmCoverted);
 
-	    frmCoverted++;
-	    fwrite(dst, 1, dstFrmBytes, fp_out);
+		frmCoverted++;
+		fwrite(dst, 1, dstFrmBytes, fp_out);
 	}
 
 	free(src);

@@ -149,14 +149,7 @@ extern "C" {
         unsigned char* v_lower1_full_ptr, //interpolated V
         unsigned int demomode //process half frame only?
     );
-
-    /*void pixel_BT601_to_BT709(	unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);
-    void pixel_BT601_to_sRGB_PC(unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);
-    void pixel_BT709_to_BT601(	unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);
-    void pixel_BT709_to_sRGB_PC(unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);
-    void pixel_sRGB_PC_to_BT709(unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);
-    void pixel_sRGB_PC_to_BT601(unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char *in_ch_0, const unsigned char *in_ch_1,const unsigned char *in_ch_2);*/
-
+ 
     void pixel_colspace_to_colspace(unsigned char* out_ch_0, unsigned char* out_ch_1, unsigned char* out_ch_2, const unsigned char* in_ch_0, const unsigned char* in_ch_1, const unsigned char* in_ch_2, signed short* mat, signed short* in_offset, signed short* out_offset, int* exponent, unsigned char* clip);
 
 #ifdef __cplusplus
